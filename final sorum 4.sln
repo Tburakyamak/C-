@@ -1,25 +1,36 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.8.34330.188
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "final sorum 4", "final sorum 4\final sorum 4.csproj", "{8201B856-0F8C-45DE-9876-0C16AEF58BF5}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8201B856-0F8C-45DE-9876-0C16AEF58BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8201B856-0F8C-45DE-9876-0C16AEF58BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8201B856-0F8C-45DE-9876-0C16AEF58BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8201B856-0F8C-45DE-9876-0C16AEF58BF5}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {28A7BEC8-1213-48FE-8307-98ECDA49DAB4}
-	EndGlobalSection
-EndGlobal
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace final_sorum_4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /* final sorum 4 */
+
+
+            Console.Write("Bir sayı giriniz: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            while (a !=1) 
+            {
+                if( a % 2 == 0 )
+                {
+                    Console.WriteLine(a/2);
+                    a = a / 2;
+                }
+                else if ( a % 2 == 1)
+                {
+                    Console.WriteLine(( a * 3 ) + 1 );
+                    a = (a * 3) + 1;
+                }
+               
+            }
+            Console.ReadLine();
+        }
+    }
+}
