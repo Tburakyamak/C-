@@ -1,0 +1,55 @@
+namespace NET_HESAPLAYICII
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            double TD,TY,TN;
+            double MD,MY,MN;
+            double FD,FY,FN;
+            double SD,SY,SN;
+            double GTN;
+
+
+            TD = Convert.ToDouble(textBox1.Text);
+            TY= Convert.ToDouble(textBox2.Text);
+
+            MD = Convert.ToDouble(textBox4.Text);
+            MY= Convert.ToDouble(textBox5.Text);
+
+            FD = Convert.ToDouble(textBox7.Text);
+            FY = Convert.ToDouble(textBox8.Text);
+
+            SD = Convert.ToDouble(textBox10.Text);
+            SY= Convert.ToDouble(textBox11.Text);
+
+            TN = TD - (TY / 4);
+            MN = MD - (MY / 4);
+            FN = FD - (FY / 4);
+            SN = SD - (SY / 4);
+            GTN = TN + MN + FN + SN;
+
+
+            textBox3.Text = TN.ToString();
+            textBox6.Text = MN.ToString();
+            textBox9.Text = FN.ToString();
+            textBox12.Text = SN.ToString();
+            textBox13.Text=GTN.ToString();
+        }
+    }
+}
